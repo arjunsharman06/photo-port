@@ -1,7 +1,7 @@
 // Importing React
 import React from 'react';
 // Importing Image
-import coverImage from '../assets/cover/cover-image.jpg';
+import coverImage from '../../assets/cover/cover-image.jpg';
 
 // Component
 const About = () => {

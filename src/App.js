@@ -2,7 +2,7 @@
 import './App.css';
 import React from 'react';
 // import Pet from './components/Pet';
-import About from './components/About';
+import About from './components/About/About';
 import Nav from './components/Nav';
 
 // Component should be in Pascal Case
