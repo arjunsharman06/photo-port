@@ -34,6 +34,7 @@ describe('About component', () => {
   it('matches snapshot DOM node structure', () => {
     // render About
     // we use asFragment function which returns the snapshot of 'about' component
+
     //  returns a snapshot of the About component.
     const { asFragment } = render(<About />);
     // comparing the snapshot
