@@ -6,8 +6,10 @@ import '@testing-library/jest-dom/extend-expect';
 import Nav from '..';
 
 // Step2 : Configure the Testing Environment
+
 // 1 . call cleanup
 afterEach(cleanup);
+
 // 2 . add describe function to declare what this test suite will be testing:
 describe('Nav component', () => {
   // basline test
