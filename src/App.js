@@ -9,6 +9,8 @@ import ContactForm from './components/Contact';
 
 // Component should be in Pascal Case
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+
   // Moving useState one level up so that it can be passed tO gallery
   const [categories] = useState([
     {
@@ -36,11 +38,18 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        <ContactForm></ContactForm>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About />
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
       </main>
     </div>
   );

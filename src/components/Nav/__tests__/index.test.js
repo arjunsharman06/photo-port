@@ -11,6 +11,8 @@ const categories = [
 
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockContactSelected = jest.fn();
+const mockSetContactSelected = jest.fn();
 
 // Step2 : Configure the Testing Environment
 
@@ -26,6 +28,8 @@ describe('Nav component', () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
   });
@@ -41,6 +45,8 @@ describe('Nav component', () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
     // comparing the snapshot
@@ -58,6 +64,8 @@ describe('emoji is visible', () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
     // Assert
@@ -72,6 +80,8 @@ describe('links are visible', () => {
       categories={categories}
       setCurrentCategory={mockSetCurrentCategory}
       currentCategory={mockCurrentCategory}
+      contactSelected={mockContactSelected}
+      setContactSelected={mockSetContactSelected}
     />
   );
 
@@ -81,6 +91,8 @@ describe('links are visible', () => {
         categories={categories}
         setCurrentCategory={mockSetCurrentCategory}
         currentCategory={mockCurrentCategory}
+        contactSelected={mockContactSelected}
+        setContactSelected={mockSetContactSelected}
       />
     );
     expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
